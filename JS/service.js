@@ -1,6 +1,8 @@
 "use strict";
 
-function MovieService($location) {
+function MovieService($http, $location) {
+  const apiKey = "f74deb744f18c80a55023593e6d85143";
+
   let favList = [];
   const getFavList = () => {
     console.log("getFavList");
@@ -18,6 +20,16 @@ function MovieService($location) {
     console.log("removeFav");
   };
   const search = (movie) => {
+    return $http({
+      method: "GET",
+      url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${movie}`
+    }).then((response) => {
+      favList = response
+      console.log(response);
+      return response;
+    });
+
+
     console.log("search");
     console.log(movie);
   }
@@ -30,6 +42,8 @@ function MovieService($location) {
     search
   };
 }
+
+MovieService.$inject = ["$http", "$location"];
 
 
 angular
