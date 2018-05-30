@@ -8,7 +8,7 @@ const movieList = {
   template:`
   <section>
   <div ng-repeat="item in $ctrl.response">
-    <img ng-src="https://image.tmdb.org/t/p/w300{{item.poster_path}}"/>
+    <img ng-click="$ctrl.movieInfo();" ng-src="https://image.tmdb.org/t/p/w300{{item.poster_path}}"/>
     <div>
     <p>{{item.title}}</p>
     <p>{{item.vote_average}}</p>
@@ -21,6 +21,10 @@ const movieList = {
   controller: ["MovieService", function(MovieService) {
     const vm = this;
     console.log(vm.response);
+    vm.movieInfo = () => {
+      MovieService.movieInfo();
+    };
+  
 
   }]
 }
