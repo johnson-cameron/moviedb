@@ -3,10 +3,10 @@
 const movieList = {
   template:`
   <section>
-  <div ng-repeat="">
+  <div>
     <img>
     <div>
-      <p></p>
+      <p>hello</p>
       <p></p>
       <p></p>
     </div>

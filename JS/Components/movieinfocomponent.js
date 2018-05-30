@@ -16,7 +16,9 @@ const movieInfo = {
   `,
   controller: ["MovieService", function(MovieService) {
     const vm = this;
-
+    vm.signUp = (user) => {
+      MovieService.setUserProfile(user);
+    };
   }]
 }
 

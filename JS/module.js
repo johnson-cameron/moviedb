@@ -13,5 +13,8 @@ angular
       .when("/search", {
         template: "<search></search>"
       })
+      .when("/movie-info", {
+        template: "<movie-info></movie-info>"
+      })
       .otherwise({redirectTo: "/watch-list"});
   });

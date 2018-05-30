@@ -3,7 +3,7 @@
 const watchList = {
   template:`
   <section>
-    <div ng-repeat="">
+    <div>
       <img>
       <div>
         <p></p>
