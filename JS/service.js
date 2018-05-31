@@ -4,15 +4,23 @@ function MovieService($http, $location) {
   const apiKey = "f74deb744f18c80a55023593e6d85143";
   let genreId =  "";
   let favList = [];
+  let movieItem = {};
   const getFavList = () => {
     console.log("getFavList");
   };
   const toSearch = () => {
     $location.path("/search");
   };
-  const movieInfo = () => {
-    console.log("movieInfo");
+  const sendMovieInfo = (item) => {
+    movieItem = item;
+    $location.path("/movie-info");
+    console.log(movieItem);
+    console.log(item);
   };
+  const getMovieInfo = () => {
+    $location.path("/movie-info");
+    return movieItem;
+  }
   const addFav = () => {
     console.log("addFav");
   };
@@ -58,12 +66,13 @@ function MovieService($http, $location) {
   return {
     getFavList,
     toSearch,
-    movieInfo,
+    sendMovieInfo,
     addFav,
     removeFav,
     searchTitle,
     searchGenre,
-    searchGenre2
+    searchGenre2,
+    getMovieInfo
   };
 }
 MovieService.$inject = ["$http", "$location"];

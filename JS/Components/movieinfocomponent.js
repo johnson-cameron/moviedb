@@ -1,26 +1,30 @@
 "use strict";
 
 const movieInfo = {
+  bindings: {
+  },
+
   template:`
     <section>
-      <img>
-      <button>Add or Remove</button>
+      <img ng-src="https://image.tmdb.org/t/p/w300{{$ctrl.movieItem.poster_path}}">
+      <button ng-click="$ctrl.movieInfoItem(movieItem);">Add or Remove</button>
     </section>
 
     <section>
-      <h3>Title:</h3>
-      <p>Rating:</p>
-      <p>Actors:</p>
-      <p>Description:</p>
+      <h3>Title: {{ $ctrl.movieItem.title }}</h3>
+      <p>Rating: {{ $ctrl.movieItem.vote_average }}</p>
+      <p>Description: {{ $ctrl.movieItem.overview }}</p>
     </section>
   `,
   controller: ["MovieService", function(MovieService) {
     const vm = this;
-    vm.signUp = (user) => {
-      MovieService.setUserProfile(user);
-    };
+    vm.movieItem = MovieService.getMovieInfo();
+
+    console.log(vm.movieItem);
   }]
+  
 }
+
 
 
 angular
