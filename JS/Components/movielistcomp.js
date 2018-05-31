@@ -20,7 +20,6 @@ const movieList = {
   `,
   controller: ["MovieService", function(MovieService) {
     const vm = this;
-    console.log(vm.response);
     vm.movieInfo = () => {
       MovieService.movieInfo();
     };

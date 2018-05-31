@@ -20,20 +20,19 @@ const search = {
     vm.searchFormTitle = (movie) => {
       MovieService.searchTitle(movie).then((response) => {
         vm.response = response.data.results;
-        console.log(vm.response);
+        vm.movie = "";
       });
     };
-
-    vm.searchFormGenre = (genre) => {
-      MovieService.searchGenre(genre).then((response) => {
+    vm.searchFormGenre = (genreId) => {
+      MovieService.searchGenre(genreId).then((response) => {
+        MovieService.searchGenre2(response).then((response) => {;
         vm.response = response.data.results;
-        console.log(vm.response);
+        vm.genre = "";
+        });
       });
     };
-
   }]
 }
-
 
 angular
   .module("app")
