@@ -5,4 +5,33 @@
 }
 .watchListMovie {
   display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  width: 25%;
+}
+.movieListComp {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+  
+.movieListItem {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px black solid;
+  text-align: center;
+
+}
+.about {
+  padding: 10px;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
 }

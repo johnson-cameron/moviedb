@@ -17,6 +17,7 @@ const search = {
   <input type="text" ng-model="$ctrl.rating"></input>
   <button>Find Rating</button>
   </form>
+  
 <movie-list response="$ctrl.response"></movie-list>
   `,
   
