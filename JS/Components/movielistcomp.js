@@ -13,9 +13,7 @@ const movieList = {
       <div>
       <p> {{item.title}}</p>
       <p> {{item.vote_average}}</p>
-      <p> {{item.overview}}</p>
-      <input type="text" ng-model="$ctrl.item.titlex">
-   
+      <p> {{item.overview}}</p>   
       </div>
     </div>
 

@@ -7,7 +7,7 @@ const movieInfo = {
   template:`
     <section>
       <img ng-src="https://image.tmdb.org/t/p/w300{{$ctrl.movieItem.poster_path}}">
-      <button ng-click="$ctrl.movieInfoItem(movieItem);">Add or Remove</button>
+      <button ng-click="$ctrl.movieInfoItem(movieItem);">Add to Watchlist!</button>
     </section>
 
     <section>
@@ -20,7 +20,9 @@ const movieInfo = {
     const vm = this;
     vm.movieItem = MovieService.getMovieInfo();
 
-    console.log(vm.movieItem);
+    vm.movieInfoItem = (movieItem) => {
+      MovieService.addFav(vm.movieItem);
+  };
   }]
   
 }

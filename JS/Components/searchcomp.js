@@ -12,7 +12,12 @@ const search = {
     <input type="text" ng-model="$ctrl.genre"></input>
     <button>Find Genre</button>
   </form>
-  <movie-list response="$ctrl.response"></movie-list>
+
+  <form ng-submit="$ctrl.searchFormRating($ctrl.rating)">
+  <input type="text" ng-model="$ctrl.rating"></input>
+  <button>Find Rating</button>
+  </form>
+<movie-list response="$ctrl.response"></movie-list>
   `,
   
   controller: ["MovieService", function( MovieService) {
@@ -23,14 +28,21 @@ const search = {
         vm.movie = "";
       });
     };
-    vm.searchFormGenre = (genreId) => {
-      MovieService.searchGenre(genreId).then((response) => {
+    vm.searchFormGenre = (genre) => {
+      MovieService.searchGenre(genre).then((response) => {
         MovieService.searchGenre2(response).then((response) => {;
         vm.response = response.data.results;
         vm.genre = "";
         });
       });
     };
+    vm.searchFormRating = (rating) => {
+      MovieService.searchRating(rating).then((response) => {
+        vm.response = response.data.results;
+        vm.rating = "";
+      });
+    };
+
   }]
 }
 
