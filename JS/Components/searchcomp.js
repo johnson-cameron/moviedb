@@ -2,22 +2,23 @@
 
 const search = {
   template:`
+  <section class="inputs">
   <form ng-submit="$ctrl.searchFormTitle($ctrl.movie)">
     <input type="text" ng-model="$ctrl.movie"></input>
-    <button>Find Movies</button>
+    <button class="searchButton">Find Movies</button>
   </form>
   
 
   <form ng-submit="$ctrl.searchFormGenre($ctrl.genre)">
     <input type="text" ng-model="$ctrl.genre"></input>
-    <button>Find Genre</button>
+    <button class="searchButton">Find Genre</button>
   </form>
 
   <form ng-submit="$ctrl.searchFormRating($ctrl.rating)">
   <input type="text" ng-model="$ctrl.rating"></input>
-  <button>Find Rating</button>
+  <button class="searchButton">Find Rating</button>
   </form>
-  
+  </section>
 <movie-list response="$ctrl.response"></movie-list>
   `,
   

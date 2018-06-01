@@ -3,7 +3,7 @@
 const navCom = {
   template:`
   <nav>
-    <button class="searchButton" ng-click="$ctrl.search();">Search</button>
+    <button class="searchButton2" ng-click="$ctrl.search();">Search</button>
     <h1>
       Cool Flix
     </h1>

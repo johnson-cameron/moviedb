@@ -5,7 +5,7 @@
 }
 
 body{
-  background-image: url("images/noom-peerapong-30948-unsplash.jpg");
+  background: linear-gradient( rgba(5, 5, 5, 0.4),  rgba(5, 5, 5, 0.4)), url("images/noom-peerapong-30948-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -13,9 +13,6 @@ body{
   font-family: "Jaldi", sans-serif;
 }
 
-#backgroundopc{
-  background-color: rgba(5, 5, 5, 0.4);
-}
 
 .watchListMovie {
   display: flex;
@@ -61,7 +58,7 @@ nav{
 
 #movieInfo{
   display: flex;
-  
+  justify-content: space-around;
 }
 
 #movieLeft{
@@ -72,7 +69,6 @@ nav{
 #movieRight{
   margin: 75px 50px 100px 0;
   width: 40%;
-
   color: #F7FFF7;
 }
 
@@ -107,26 +103,26 @@ h3{
   color: #050505;
   border-radius: 25px;
   margin-left: 30px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 h1 {
   color: #6CA6C1;
   font-size: 75px;
-  margin: 15px;
+  margin-top: 25px;
 }
 
 #syntax {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  margin: 20px;
+  margin: 43px;
 }
 
 #removeButton {
   margin-top: 20px;
   height: 50px;
-  width: 275px;
+  width: 80%;
   font-size: 20px;
   background-color: #FFE66D;
   color: #050505;
@@ -135,4 +131,29 @@ h1 {
 
 h4 {
   font-size: 30px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  border-radius: 10px;
+  height: 25px;
+  width: 150px;
+  font-size: 16px;
+  border: 3px #6CA6C1 solid;
+  padding: 10px;
+}
+
+.searchButton2 {
+  height: 25px;
+  width: 100px;
+  font-size: 16px;
+  background-color: #FFE66D;
+  color: #050505;
+  border-radius: 25px;
+  margin-left: 30px;
+  margin-top: 80px;
 }

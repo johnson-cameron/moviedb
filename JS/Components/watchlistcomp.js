@@ -7,7 +7,7 @@ const watchList = {
       <img ng-src="https://image.tmdb.org/t/p/w300{{list.movieItem.poster_path}}">
       <div class="about">
       <h4> {{ list.movieItem.title }}</h4>
-      <button id="removeButton" ng-click="$ctrl.removeFav($index, list);" >Remove from Watchlist</button>
+      <button id="removeButton" ng-click="$ctrl.removeFav($index, list);" >Remove</button>
       </div>
     </div>
   </section>
