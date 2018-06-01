@@ -7,6 +7,7 @@ const navCom = {
     <h1>
       HotFlix
     </h1>
+  
     <img>
   </nav>
   `,

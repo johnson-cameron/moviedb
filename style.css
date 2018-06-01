@@ -3,20 +3,34 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body{
+  background-image: url("images/noom-peerapong-30948-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #F7FFF7;
+}
+
+#backgroundopc{
+  background-color: rgba(5, 5, 5, 0.4);
+  height:
+}
+
 .watchListMovie {
   display: flex;
   flex-direction: row;
-
   flex-wrap: wrap;
   width: 25%;
 }
+
 .movieListComp {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 
 }
-  
+
 .movieListItem {
   display: flex;
   flex-direction: column;
@@ -25,8 +39,8 @@
   padding: 10px;
   border: 1px black solid;
   text-align: center;
-
 }
+
 .about {
   padding: 10px;
 }
@@ -34,4 +48,52 @@
 .img {
   width: 100px;
   height: 100px;
+}
+
+nav{
+  background-image: url("images/filmstrip.png");
+  background-size: cover;
+  color: #F7FFF7;
+  display: flex;
+  flex-direction: row;
+}
+
+#movieInfo{
+  display: flex;
+  
+}
+
+#movieLeft{
+  margin: 50px 0 100px 50px;
+  width: 40%;
+}
+
+#movieRight{
+  margin: 75px 50px 100px 0;
+  width: 40%;
+
+  color: #F7FFF7;
+}
+
+p{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h3{
+  font-size: 50px;
+}
+
+.movieInfoP{
+  font-size: 26px;
+}
+
+#infoButton{
+  margin-top: 20px;
+  height: 50px;
+  width: 250px;
+  font-size: 26px;
+  background-color: #FFE66D;
+  color: #050505;
+  border-radius: 25px;
 }
