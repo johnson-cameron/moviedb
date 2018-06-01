@@ -3,18 +3,21 @@
 const navCom = {
   template:`
   <nav>
-    <button ng-click="$ctrl.search();">Search</button>
+    <button class="searchButton" ng-click="$ctrl.search();">Search</button>
     <h1>
-      HotFlix
+      Cool Flix
     </h1>
   
-    <img>
+    <img id="syntax" src="images/syntax.png" ng-click="$ctrl.toWL();">
   </nav>
   `,
   controller: ["MovieService", function(MovieService) {
     const vm = this;
     vm.search = () => {
       MovieService.toSearch();
+    };
+    vm.toWL = () => {
+      MovieService.toWL();
     };
   }]
 }

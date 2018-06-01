@@ -10,11 +10,11 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #F7FFF7;
+  font-family: "Jaldi", sans-serif;
 }
 
 #backgroundopc{
   background-color: rgba(5, 5, 5, 0.4);
-  height:
 }
 
 .watchListMovie {
@@ -28,16 +28,16 @@ body{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-
+  margin-top: 30px;
 }
 
 .movieListItem {
   display: flex;
   flex-direction: column;
   width: 25%;
-  margin: 10px;
-  padding: 10px;
-  border: 1px black solid;
+  margin: 15px;
+  padding: 20px;
+  border: 5px #FFE66D dashed;
   text-align: center;
 }
 
@@ -52,10 +52,11 @@ body{
 
 nav{
   background-image: url("images/filmstrip.png");
-  background-size: cover;
+  height: 190px;
   color: #F7FFF7;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 #movieInfo{
@@ -96,4 +97,42 @@ h3{
   background-color: #FFE66D;
   color: #050505;
   border-radius: 25px;
+}
+
+.searchButton {
+  height: 25px;
+  width: 100px;
+  font-size: 16px;
+  background-color: #FFE66D;
+  color: #050505;
+  border-radius: 25px;
+  margin-left: 30px;
+  margin-top: 50px;
+}
+
+h1 {
+  color: #6CA6C1;
+  font-size: 75px;
+  margin: 15px;
+}
+
+#syntax {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+
+#removeButton {
+  margin-top: 20px;
+  height: 50px;
+  width: 275px;
+  font-size: 20px;
+  background-color: #FFE66D;
+  color: #050505;
+  border-radius: 25px;
+}
+
+h4 {
+  font-size: 30px;
 }

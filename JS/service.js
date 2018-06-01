@@ -39,8 +39,11 @@ function MovieService($http, $location) {
       
       return response;
     });
-
-  }
+  };
+  const toWL = () => {
+    $location.path("/watch-list");
+    console.log("service");
+  };
   const searchGenre = (genre) => {
     return $http({
       method: "GET",
@@ -61,7 +64,6 @@ function MovieService($http, $location) {
       method: "GET",
       url: `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=vote_average&include_adult=false&include_video=false&page=1&vote_average.gte=${rating}`
     }).then((response) => {
-      console.log(response);
       return response;
     });
 
@@ -92,7 +94,8 @@ function MovieService($http, $location) {
     searchGenre,
     searchGenre2,
     getMovieInfo,
-    searchRating
+    searchRating,
+    toWL
   };
 }
 MovieService.$inject = ["$http", "$location"];
