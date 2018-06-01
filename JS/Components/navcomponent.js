@@ -7,8 +7,7 @@ const navCom = {
     <h1>
       Cool Flix
     </h1>
-  
-    <img id="syntax" src="images/syntax.png" ng-click="$ctrl.toWL();">
+    <img class="hover" id="syntax" src="images/syntax.png" ng-click="$ctrl.toWL();">
   </nav>
   `,
   controller: ["MovieService", function(MovieService) {

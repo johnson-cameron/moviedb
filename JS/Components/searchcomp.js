@@ -7,13 +7,10 @@ const search = {
     <input type="text" ng-model="$ctrl.movie"></input>
     <button class="searchButton">Find Movies</button>
   </form>
-  
-
   <form ng-submit="$ctrl.searchFormGenre($ctrl.genre)">
     <input type="text" ng-model="$ctrl.genre"></input>
     <button class="searchButton">Find Genre</button>
   </form>
-
   <form ng-submit="$ctrl.searchFormRating($ctrl.rating)">
   <input type="text" ng-model="$ctrl.rating"></input>
   <button class="searchButton">Find Rating</button>
@@ -21,7 +18,6 @@ const search = {
   </section>
 <movie-list response="$ctrl.response"></movie-list>
   `,
-  
   controller: ["MovieService", function( MovieService) {
     const vm = this;
     vm.searchFormTitle = (movie) => {
@@ -44,7 +40,6 @@ const search = {
         vm.rating = "";
       });
     };
-
   }]
 }
 

@@ -21,7 +21,7 @@ const watchList = {
     };
     vm.removeFav = (index,list) => {
       MovieService.removeFav(index, list);
-    }
+    };
   }]
 }
 

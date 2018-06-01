@@ -6,7 +6,6 @@ function MovieService($http, $location) {
   let genreId =  "";
   let favList = [];
   let movieItem = {};
-
   const toSearch = () => {
     $location.path("/search");
   };
@@ -17,7 +16,7 @@ function MovieService($http, $location) {
   const getMovieInfo = () => {
     $location.path("/movie-info");
     return movieItem;
-  }
+  };
   const addFav = (movieItem) => {
     favList.push({
       movieItem
@@ -55,10 +54,9 @@ function MovieService($http, $location) {
           genreId = `${response.data.genres[index].id}`;
           return genreId;
         };
-    }
+      }
     });
   }
-
   const searchRating = (rating) => {
     return $http({
       method: "GET",
@@ -66,23 +64,14 @@ function MovieService($http, $location) {
     }).then((response) => {
       return response;
     });
-
   }
-
-
-
-
-
-
-
   const searchGenre2 = (response) => {
     return $http({
       method: "GET",
       url: `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genreId}`
     }).then((response) => {
-
     return response;
-  })
+    })
   } 
   return {
     getFavList,
